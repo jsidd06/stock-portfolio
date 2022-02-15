@@ -21,24 +21,24 @@ function BuySellScreen() {
       <Card>
         <Row>
           <Col md="6">
-            <Button
-              color="primary"
+            <Link to="/selloption"
+              className="btn btn-primary"
               style={{ paddingLeft: 50, paddingRight: 50 }}
             >
               Buy
-            </Button>
+            </Link>
           </Col>
           <Col md="6">
-            <Button
-              color="warning"
+            <Link to="/selloption"
+              className="btn btn-warning"
               style={{ paddingLeft: 50, paddingRight: 50 }}
             >
               Sell
-            </Button>
+            </Link>
           </Col>
         </Row>
         <CardHeader>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/graph" style={{ textDecoration: "none" }}>
             View Chart{" "}
           </Link>
         </CardHeader>

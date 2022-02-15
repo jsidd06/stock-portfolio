@@ -3,6 +3,11 @@ import { Button, Card, CardHeader, Col, Container, Input, Row } from "reactstrap
 import { Select, Radio, Switch } from "antd";
 import { Link } from "react-router-dom";
 function BuySellOptionScreen() {
+  const submitHandler = (e) => {
+    e.preventDefault();
+    alert("Submitted");
+    window.location = "/portfolio";
+  }
   return (
     <Container className="mt-5">
       <Card>
@@ -63,7 +68,7 @@ function BuySellOptionScreen() {
           <div className="text-center">
             <Button style={{ paddingLeft: 50, paddingRight: 50 }}>More</Button>
           </div>
-          <Button className="w-100 mt-2" color="primary">Tap To Buy</Button>
+          <Button className="w-100 mt-2" onClick={submitHandler} color="primary">Tap To Buy</Button>
         </CardHeader>
       </Card>
     </Container>

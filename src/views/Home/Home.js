@@ -1,48 +1,68 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import { Card, CardBody, CardHeader, CardImg, CardImgOverlay, CardText, CardTitle, Col, Container, Row } from 'reactstrap';
-import stockImg from "../../Images/518-5187885_picture-of-a-phone-and-laptop-with-the.png"
-import FooterScreen from '../FooterScreen/FooterScreen';
-import NavBarScreen from '../NavBarScreen/NavBarScreen';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  CardImg,
+  CardImgOverlay,
+  CardText,
+  CardTitle,
+  Col,
+  Container,
+  Row,
+} from "reactstrap";
+import stockImg from "../../Images/518-5187885_picture-of-a-phone-and-laptop-with-the.png";
+import FooterScreen from "../FooterScreen/FooterScreen";
 function Home() {
-  if(!localStorage.getItem("token")){
+  if (!localStorage.getItem("token")) {
     window.location = "/login";
   }
   return (
     <>
-      <div>
+      <div className="mt-2">
         <Card inverse style={{ textAlign: "left" }}>
-          <NavBarScreen />
+         
           <CardBody>
             <Row>
-              <Col md="6"></Col>
-              <Col md="6">
+              <Col sm="12" md="6">
+                <Container
+                  style={{
+                    textAlign: "center",
+                    color: "black",
+                    marginTop: "100px",
+                    marginBottom: "150px",
+                  }}
+                >
+                  <Row>
+                    <Col md="6">
+                      <h5 tag="h5" style={{ fontSize: 50 }}>
+                        See Your Portfolio
+                      </h5>
+                      <CardText>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </CardText>
+                      <CardText>
+                        <Link
+                          className="btn btn-primary"
+                          style={{ paddingRight: 50, paddingLeft: 50 }}
+                          to="/"
+                        >
+                          Check Now
+                        </Link>
+                      </CardText>
+                    </Col>
+                  </Row>
+                </Container>
+              </Col>
+              <Col sm="12" md="6">
                 <CardImg alt="Card image cap" src={stockImg} />
-                <CardImgOverlay>
-                  <Container style={{ color: "black", marginTop: "150px" }}>
-                    <CardTitle tag="h5" style={{ fontSize: 50 }}>
-                      See Your Portfolio
-                    </CardTitle>
-                    <CardText>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </CardText>
-                    <CardText>
-                      <Link
-                        className="btn btn-primary"
-                        style={{ paddingRight: 50, paddingLeft: 50 }}
-                        to="/"
-                      >
-                        Check Now
-                      </Link>
-                    </CardText>
-                  </Container>
-                </CardImgOverlay>
               </Col>
             </Row>
           </CardBody>
         </Card>
       </div>
-      <div style={{ textAlign: "center", marginTop: 50 }}>
+      <Container style={{ textAlign: "center", marginTop: 50 }}>
         <h2>What is Lorem Ipsum?</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -128,7 +148,7 @@ function Home() {
             </Row>
           </CardBody>
         </Card>
-      </div>
+      </Container>
       <Card className="text-center p-5">
         <CardBody>
           <h3>Pricing</h3>
@@ -139,7 +159,13 @@ function Home() {
             lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt
           </p>
-          <Link to="/" className="btn btn-primary" style={{paddingRight:50,paddingLeft:50}} >Learn more</Link>
+          <Link
+            to="/"
+            className="btn btn-primary"
+            style={{ paddingRight: 50, paddingLeft: 50 }}
+          >
+            Learn more
+          </Link>
         </CardBody>
       </Card>
       <FooterScreen />
@@ -147,4 +173,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Home;

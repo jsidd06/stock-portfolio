@@ -7,7 +7,7 @@ function StockView() {
     window.location = "/login";
   }
   return (
-    <Container>
+    <Container className="mt-2">
       <Card>
         <CardHeader>
           <h3>Stock View</h3>

@@ -4,11 +4,13 @@ import BuySellOptionScreen from './views/BuySellOptionScreen/BuySellOptionScreen
 import BuySellScreen from './views/BuySellScreen/BuySellScreen';
 import Home from './views/Home/Home'
 import LoginScreen from './views/LoginScreen/LoginScreen';
+import NavBarScreen from './views/NavBarScreen/NavBarScreen';
 import Portfolio from './views/Portfolio/Portfolio';
 import StockScreen from "./views/StockView/StockView"
 function App() {
   return (
     <BrowserRouter>
+      <NavBarScreen />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginScreen />} />

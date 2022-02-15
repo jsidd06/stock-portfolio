@@ -15,7 +15,7 @@ function Portfolio() {
     window.location = "/login";
   }
   return (
-    <Container>
+    <Container className="mt-2">
       <Card>
         <CardHeader>
           <h3>Portfolio</h3>
