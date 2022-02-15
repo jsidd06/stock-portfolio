@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { Card, CardBody, CardImg, CardImgOverlay, CardText, CardTitle, Col, Container, Row } from 'reactstrap';
 import stockImg from "../../Images/518-5187885_picture-of-a-phone-and-laptop-with-the.png"
+import FooterScreen from '../FooterScreen/FooterScreen';
 import NavBarScreen from '../NavBarScreen/NavBarScreen';
 function Home() {
   return (
@@ -23,7 +24,11 @@ function Home() {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </CardText>
                     <CardText>
-                      <Link className="btn btn-primary" to="/">
+                      <Link
+                        className="btn btn-primary"
+                        style={{ paddingRight: 50, paddingLeft: 50 }}
+                        to="/"
+                      >
                         Check Now
                       </Link>
                     </CardText>
@@ -42,9 +47,9 @@ function Home() {
           text ever since the 1500s, <br></br>when an unknown printer took a
           galley of type and scrambled it to make a type specimen book.
         </p>
-        <Card className="mt-5">
-          <CardBody>
-            <Row>
+        <Card className="mt-2">
+          <CardBody className="p-5">
+            <Row className="p-4">
               <Col md="4">
                 <CardBody style={{ border: "2px solid" }} className="mt-5 p-4">
                   <i
@@ -60,7 +65,11 @@ function Home() {
                     when an unknown printer took a galley of type and scrambled
                     it to make a type specimen book.
                   </p>
-                  <Link className="btn btn-warning" to="/">
+                  <Link
+                    className="btn btn-warning"
+                    style={{ paddingRight: 50, paddingLeft: 50 }}
+                    to="/"
+                  >
                     Learn Now
                   </Link>
                 </CardBody>
@@ -80,7 +89,11 @@ function Home() {
                     when an unknown printer took a galley of type and scrambled
                     it to make a type specimen book.
                   </p>
-                  <Link className="btn btn-warning" to="/">
+                  <Link
+                    className="btn btn-warning"
+                    style={{ paddingRight: 50, paddingLeft: 50 }}
+                    to="/"
+                  >
                     Learn Now
                   </Link>
                 </CardBody>
@@ -100,7 +113,11 @@ function Home() {
                     when an unknown printer took a galley of type and scrambled
                     it to make a type specimen book.
                   </p>
-                  <Link className="btn btn-warning" to="/">
+                  <Link
+                    className="btn btn-warning"
+                    style={{ paddingRight: 50, paddingLeft: 50 }}
+                    to="/"
+                  >
                     Learn Now
                   </Link>
                 </CardBody>
@@ -109,6 +126,7 @@ function Home() {
           </CardBody>
         </Card>
       </div>
+      <FooterScreen />
     </>
   );
 }
