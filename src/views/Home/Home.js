@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Card, CardBody, CardImg, CardImgOverlay, CardText, CardTitle, Col, Container, Row } from 'reactstrap';
+import { Card, CardBody, CardHeader, CardImg, CardImgOverlay, CardText, CardTitle, Col, Container, Row } from 'reactstrap';
 import stockImg from "../../Images/518-5187885_picture-of-a-phone-and-laptop-with-the.png"
 import FooterScreen from '../FooterScreen/FooterScreen';
 import NavBarScreen from '../NavBarScreen/NavBarScreen';
@@ -126,6 +126,19 @@ function Home() {
           </CardBody>
         </Card>
       </div>
+      <Card className="text-center">
+        <CardHeader>
+          <h3>Pricing</h3>
+          <p>
+            lorem ipsum dolor sit <b>amet</b>
+          </p>
+          <p>
+            lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt
+          </p>
+          <Link to="/" className="btn btn-primary" style={{paddingRight:50,paddingLeft:50}} >Learn more</Link>
+        </CardHeader>
+      </Card>
       <FooterScreen />
     </>
   );
