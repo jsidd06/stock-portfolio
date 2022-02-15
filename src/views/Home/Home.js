@@ -126,8 +126,8 @@ function Home() {
           </CardBody>
         </Card>
       </div>
-      <Card className="text-center">
-        <CardHeader>
+      <Card className="text-center p-5">
+        <CardBody>
           <h3>Pricing</h3>
           <p>
             lorem ipsum dolor sit <b>amet</b>
@@ -137,7 +137,7 @@ function Home() {
             eiusmod tempor incididunt
           </p>
           <Link to="/" className="btn btn-primary" style={{paddingRight:50,paddingLeft:50}} >Learn more</Link>
-        </CardHeader>
+        </CardBody>
       </Card>
       <FooterScreen />
     </>
