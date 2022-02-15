@@ -1,9 +1,19 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import { Button, Card, CardBody, CardHeader, Col, Container, Row, Table } from 'reactstrap'
-
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Button,
+  Card,
+  CardBody,
+  CardHeader,
+  Col,
+  Container,
+  Row,
+  Table,
+} from "reactstrap";
+import Tabledata from "../../FakeData/TableFakeData";
+import data from "../../FakeData/FakeData";
 function BuySellScreen() {
-  if(!localStorage.getItem("token")){
+  if (!localStorage.getItem("token")) {
     window.location = "/login";
   }
   return (
@@ -11,10 +21,20 @@ function BuySellScreen() {
       <Card>
         <Row>
           <Col md="6">
-            <Button style={{ paddingLeft: 50, paddingRight: 50 }}>Buy</Button>
+            <Button
+              color="primary"
+              style={{ paddingLeft: 50, paddingRight: 50 }}
+            >
+              Buy
+            </Button>
           </Col>
           <Col md="6">
-            <Button style={{ paddingLeft: 50, paddingRight: 50 }}>Sell</Button>
+            <Button
+              color="warning"
+              style={{ paddingLeft: 50, paddingRight: 50 }}
+            >
+              Sell
+            </Button>
           </Col>
         </Row>
         <CardHeader>
@@ -30,43 +50,25 @@ function BuySellScreen() {
           <Table responsive>
             <thead>
               <tr>
-                <th>Market Depth</th>
-                <th>Table heading</th>
-                <th>Table heading</th>
-                <th>Table heading</th>
-                <th>Table heading</th>
-                <th>Table heading</th>
-                <th>Table heading</th>
+                <th>Bid</th>
+                <th>Orders</th>
+                <th>Quantity</th>
+                <th>Offer</th>
+                <th>Orders</th>
+                <th>Quantity</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-              </tr>
+              {Tabledata.map((stock) => (
+                <tr key={stock.id}>
+                  <td>{stock.bid}</td>
+                  <td>{stock.bidOrders}</td>
+                  <td>{stock.bidQuantity}</td>
+                  <td>{stock.offer}</td>
+                  <td>{stock.offerOrders}</td>
+                  <td>{stock.offerQuantity}</td>
+                </tr>
+              ))}
             </tbody>
           </Table>
           <Row>
@@ -87,40 +89,27 @@ function BuySellScreen() {
               <p>433.00</p>
             </Col>
           </Row>
-          <Table striped>
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </Table>
+          {data.map((stock) => (
+            <Row className="mt-2 shadow-sm p-1  rounded">
+              <Col md="6">
+                <div key={stock.id}>
+                  <Link
+                    style={{ textDecoration: "none", textAlign: "left" }}
+                    to="/buy_sell"
+                  >
+                    {stock.company}
+                  </Link>
+                </div>
+              </Col>
+              <Col md="6" style={{ textAlign: "right" }}>
+                <p>Change: {stock.change}</p>
+              </Col>
+            </Row>
+          ))}
         </CardBody>
       </Card>
     </Container>
   );
 }
 
-export default BuySellScreen
+export default BuySellScreen;
