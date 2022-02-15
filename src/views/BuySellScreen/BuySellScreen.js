@@ -15,7 +15,7 @@ function BuySellScreen() {
           </Col>
         </Row>
         <CardHeader>
-          <Link to="/view_chart" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             View Chart{" "}
           </Link>
         </CardHeader>
