@@ -1,8 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import {Card, CardBody, CardHeader, Col, Container, Row}from "reactstrap"
-import data from "../../FakeData/FakeData"
+import React from "react";
+import { Link } from "react-router-dom";
+import { Card, CardBody, CardHeader, Col, Container, Row } from "reactstrap";
+import data from "../../FakeData/FakeData";
 function StockView() {
+  if (!localStorage.getItem("token")) {
+    window.location = "/login";
+  }
   return (
     <Container>
       <Card>
@@ -14,7 +17,9 @@ function StockView() {
             <Row>
               <Col>
                 <div key={stock.id}>
-                  <Link style={{textDecoration:"none"}} to="/buy_sell">{stock.company}</Link>
+                  <Link style={{ textDecoration: "none" }} to="/buy_sell">
+                    {stock.company}
+                  </Link>
                   <p>Price: {stock.price}</p>
                   <p>Change: {stock.change}</p>
                   <p>Change Percentage: {stock.changePercentage}</p>
@@ -34,4 +39,4 @@ function StockView() {
   );
 }
 
-export default StockView
+export default StockView;

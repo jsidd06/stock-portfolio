@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { Button, Card, CardBody, CardHeader, Col, Container, Row, Table } from 'reactstrap'
 
 function BuySellScreen() {
+  if(!localStorage.getItem("token")){
+    window.location = "/login";
+  }
   return (
     <Container className="text-center mt-5">
       <Card>
