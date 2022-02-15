@@ -4,21 +4,21 @@ import { Collapse, Nav,NavLink, Navbar, NavbarBrand, NavbarText, NavbarToggler, 
 function NavBarScreen() {
   return (
     <div>
-      <Navbar color="light" expand="md" light>
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+      <Navbar color="transparent" expand="md" >
+        <NavbarBrand href="/">Stock Portfolio</NavbarBrand>
         <NavbarToggler onClick={function noRefCheck() {}} />
         <Collapse navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/components/">Home</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
+                About
               </NavLink>
             </NavItem>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText style={{color:"black"}}>Login</NavbarText>
         </Collapse>
       </Navbar>
     </div>
