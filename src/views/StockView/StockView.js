@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import {Card, CardBody, CardHeader, Col, Container, Row}from "reactstrap"
 import data from "../../FakeData/FakeData"
 function StockView() {
@@ -13,7 +14,7 @@ function StockView() {
             <Row>
               <Col>
                 <div key={stock.id}>
-                  <h3>{stock.company}</h3>
+                  <Link style={{textDecoration:"none"}} to="/buy_sell">{stock.company}</Link>
                   <p>Price: {stock.price}</p>
                   <p>Change: {stock.change}</p>
                   <p>Change Percentage: {stock.changePercentage}</p>
