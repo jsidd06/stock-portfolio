@@ -9,27 +9,29 @@ function Home() {
       <div>
         <Card inverse style={{ textAlign: "left" }}>
           <NavBarScreen />
-          <Row>
-            <Col md="6"></Col>
-            <Col md="6">
-              <CardImg alt="Card image cap" src={stockImg} />
-              <CardImgOverlay>
-                <Container style={{ color: "black", marginTop: "150px" }}>
-                  <CardTitle tag="h5" style={{ fontSize: 50 }}>
-                    See Your Portfolio
-                  </CardTitle>
-                  <CardText>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </CardText>
-                  <CardText>
-                    <Link className="btn btn-primary" to="/">
-                      Check Now
-                    </Link>
-                  </CardText>
-                </Container>
-              </CardImgOverlay>
-            </Col>
-          </Row>
+          <CardBody>
+            <Row>
+              <Col md="6"></Col>
+              <Col md="6">
+                <CardImg alt="Card image cap" src={stockImg} />
+                <CardImgOverlay>
+                  <Container style={{ color: "black", marginTop: "150px" }}>
+                    <CardTitle tag="h5" style={{ fontSize: 50 }}>
+                      See Your Portfolio
+                    </CardTitle>
+                    <CardText>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </CardText>
+                    <CardText>
+                      <Link className="btn btn-primary" to="/">
+                        Check Now
+                      </Link>
+                    </CardText>
+                  </Container>
+                </CardImgOverlay>
+              </Col>
+            </Row>
+          </CardBody>
         </Card>
       </div>
       <div style={{ textAlign: "center", marginTop: 50 }}>
@@ -44,55 +46,64 @@ function Home() {
           <CardBody>
             <Row>
               <Col md="4">
-                <i
-                  style={{ fontSize: 60 }}
-                  className="fa-solid fa-arrow-trend-down"
-                ></i>
-                <h3>What is Lorem Ipsum?</h3>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. <br></br>Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s, <br></br>
-                  when an unknown printer took a galley of type and scrambled it
-                  to make a type specimen book.
-                </p>
-                <Link className="btn btn-warning" to="/">
-                  Learn Now
-                </Link>
+                <CardBody style={{ border: "2px solid" }} className="mt-5 p-4">
+                  <i
+                    style={{ fontSize: 60 }}
+                    className="fa-solid fa-arrow-trend-down"
+                  ></i>
+                  <h3>What is Lorem Ipsum?</h3>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. <br></br>Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s,{" "}
+                    <br></br>
+                    when an unknown printer took a galley of type and scrambled
+                    it to make a type specimen book.
+                  </p>
+                  <Link className="btn btn-warning" to="/">
+                    Learn Now
+                  </Link>
+                </CardBody>
               </Col>
               <Col md="4">
-                <i
-                  style={{ fontSize: 60 }}
-                  className="fa-solid fa-arrow-trend-down"
-                ></i>
-                <h3>What is Lorem Ipsum?</h3>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. <br></br>Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s, <br></br>
-                  when an unknown printer took a galley of type and scrambled it
-                  to make a type specimen book.
-                </p>
-                <Link className="btn btn-warning" to="/">
-                  Learn Now
-                </Link>
+                <CardBody style={{ border: "2px solid" }} className="mt-5 p-4">
+                  <i
+                    style={{ fontSize: 60 }}
+                    className="fa-solid fa-arrow-trend-down"
+                  ></i>
+                  <h3>What is Lorem Ipsum?</h3>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. <br></br>Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s,{" "}
+                    <br></br>
+                    when an unknown printer took a galley of type and scrambled
+                    it to make a type specimen book.
+                  </p>
+                  <Link className="btn btn-warning" to="/">
+                    Learn Now
+                  </Link>
+                </CardBody>
               </Col>
               <Col md="4">
-                <i
-                  style={{ fontSize: 60 }}
-                  className="fa-solid fa-arrow-trend-down"
-                ></i>
-                <h3>What is Lorem Ipsum?</h3>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. <br></br>Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s, <br></br>
-                  when an unknown printer took a galley of type and scrambled it
-                  to make a type specimen book.
-                </p>
-                <Link className="btn btn-warning" to="/">
-                  Learn Now
-                </Link>
+                <CardBody style={{ border: "2px solid" }} className="mt-5 p-4">
+                  <i
+                    style={{ fontSize: 60 }}
+                    className="fa-solid fa-arrow-trend-down"
+                  ></i>
+                  <h3>What is Lorem Ipsum?</h3>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. <br></br>Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s,{" "}
+                    <br></br>
+                    when an unknown printer took a galley of type and scrambled
+                    it to make a type specimen book.
+                  </p>
+                  <Link className="btn btn-warning" to="/">
+                    Learn Now
+                  </Link>
+                </CardBody>
               </Col>
             </Row>
           </CardBody>
