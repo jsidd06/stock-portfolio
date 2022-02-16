@@ -18,6 +18,7 @@ function Home() {
   if (!localStorage.getItem("token")) {
     window.location = "/login";
   }
+  
   return (
     <>
       <div className="mt-2">
