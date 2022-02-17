@@ -29,24 +29,15 @@ function BuySellScreen() {
             </Link>
           </Col>
           <Col md="6">
-            <Link to="/selloption"
+            <Link to="/graph"
               className="btn btn-warning"
               style={{ paddingLeft: 50, paddingRight: 50 }}
             >
-              Sell
+              View Graph
             </Link>
           </Col>
         </Row>
-        <CardHeader>
-          <Link to="/graph" style={{ textDecoration: "none" }}>
-            View Chart{" "}
-          </Link>
-        </CardHeader>
         <CardBody>
-          <Row>
-            <Col md="6">create alert</Col>
-            <Col md="6">create GTT</Col>
-          </Row>
           <Table responsive>
             <thead>
               <tr>
@@ -71,24 +62,6 @@ function BuySellScreen() {
               ))}
             </tbody>
           </Table>
-          <Row>
-            <Col md="3">
-              <p>open</p>
-              <p>433.00</p>
-            </Col>
-            <Col md="3">
-              <p>high</p>
-              <p>433.00</p>
-            </Col>
-            <Col md="3">
-              <p>low</p>
-              <p>433.00</p>
-            </Col>
-            <Col md="3">
-              <p>prev.close</p>
-              <p>433.00</p>
-            </Col>
-          </Row>
           {data.map((stock) => (
             <Row className="mt-2 shadow-sm p-1  rounded">
               <Col md="6">

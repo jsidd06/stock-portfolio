@@ -18,8 +18,10 @@ function StockView() {
             <Row className="mt-5 shadow-sm p-3  rounded">
               <Col md="6">
                 <div key={stock.id}>
-                  <Link style={{ textDecoration: "none" }} to="/buy_sell">
+                  <h3>
                     {stock.company}
+                  </h3><br></br>
+                  <Link className=" btn btn-primary"  to="/buy_sell">BuyNow
                   </Link>
                 </div>
               </Col>
