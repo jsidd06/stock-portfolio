@@ -37,13 +37,16 @@ function LoginScreen() {
         </CardHeader>
         <CardBody>
           <Form>
-            <Label>Username</Label>
+            <Label>Email</Label>
             <Input
               type="text"
               value={email}
               name="username"
               onChange={(e) => setEmail(e.target.value)}
               placeholder="enter your username"
+              invalid={email === ""}
+              maxLength="50"
+              minLength={5}
             />
             <Label>Password</Label>
             <Input
@@ -52,6 +55,9 @@ function LoginScreen() {
               name="password"
               onChange={(e) => setPassword(e.target.value)}
               placeholder="enter your password"
+              invalid={password === ""}
+              maxLength="8"
+              minLength={5}
             />
             <Button onClick={submitHandler} color="primary">
               Login
