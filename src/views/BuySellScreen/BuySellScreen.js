@@ -13,15 +13,13 @@ import {
 import Tabledata from "../../FakeData/TableFakeData";
 import data from "../../FakeData/FakeData";
 function BuySellScreen() {
-  if (!localStorage.getItem("token")) {
-    window.location = "/login";
-  }
   return (
     <Container className="text-center mt-5">
       <Card>
         <Row>
           <Col md="6">
-            <Link to="/selloption"
+            <Link
+              to="/selloption"
               className="btn btn-primary"
               style={{ paddingLeft: 50, paddingRight: 50 }}
             >
@@ -29,7 +27,8 @@ function BuySellScreen() {
             </Link>
           </Col>
           <Col md="6">
-            <Link to="/graph"
+            <Link
+              to="/graph"
               className="btn btn-warning"
               style={{ paddingLeft: 50, paddingRight: 50 }}
             >
@@ -62,8 +61,8 @@ function BuySellScreen() {
               ))}
             </tbody>
           </Table>
-          {data.map((stock,index) => (
-            <Row key={index}className="mt-2 shadow-sm p-1  rounded">
+          {data.map((stock, index) => (
+            <Row key={index} className="mt-2 shadow-sm p-1  rounded">
               <Col md="6">
                 <div key={stock.id} style={{ textAlign: "left" }}>
                   <Link style={{ textDecoration: "none" }} to="/buy_sell">

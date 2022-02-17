@@ -11,9 +11,6 @@ import {
 } from "reactstrap";
 import data from "../../FakeData/FakeData";
 function Portfolio() {
-  if (!localStorage.getItem("token")) {
-    window.location = "/login";
-  }
   return (
     <Container className="mt-2">
       <Card>

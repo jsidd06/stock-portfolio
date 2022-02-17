@@ -16,10 +16,6 @@ import stockImg from "../../Images/518-5187885_picture-of-a-phone-and-laptop-wit
 import FooterScreen from "../FooterScreen/FooterScreen";
 import NavBarScreen from "../NavBarScreen/NavBarScreen";
 function Home() {
-  if (!localStorage.getItem("token")) {
-    window.location = "/login";
-  }
-  
   return (
     <>
       <div className="mt-2">

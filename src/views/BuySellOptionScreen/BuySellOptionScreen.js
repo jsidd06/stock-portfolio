@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Button, Card, CardHeader, Col, Container, Input, Row } from "reactstrap";
-import { Select, Radio, Switch } from "antd";
-import { Link } from "react-router-dom";
 function BuySellOptionScreen() {
   const [quantity, setQuantity] = useState([]);
   const [price, setPrice] = useState([]);
