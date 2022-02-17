@@ -9,33 +9,31 @@ import {
   Row,
 } from "reactstrap";
 import { useParams } from "react-router-dom";
-function BuySellOptionScreen() {
-  const [quantity, setQuantity] = useState();
-  const [price, setPrice] = useState();
+function SellOptionScreen() {
+  const { id } = useParams();
+  const stocks = localStorage.getItem("stocks")
+    ? JSON.parse(localStorage.getItem("stocks"))
+    : [];
+  const stock = stocks.find((stock) => stock.id === id);
+
+  const [quantity, setQuantity] = useState(stock && stock.quantity);
+  const [price, setPrice] = useState(stock && stock.price);
   const submitHandler = (e) => {
     e.preventDefault();
-    const stocks = localStorage.getItem("stocks")
-      ? JSON.parse(localStorage.getItem("stocks"))
-      : [];
-    const newStock = {
-      company,
-      quantity,
-      price,
-    };
-    stocks.push(newStock);
-    localStorage.setItem("stocks", JSON.stringify(stocks));
+    const filteredStocks = stocks.filter((s) => s.id !== id);
+    localStorage.setItem("stocks", JSON.stringify(filteredStocks));
     window.location = "/portfolio";
   };
-  const { company } = useParams();
-  if (!company) {
-    return <h1>Sorry this page is not available</h1>;
+
+  if (!stock) {
+    return <h1>The stock is not available</h1>;
   }
   return (
     <Container className="mt-5">
       <Card>
         <CardHeader>
           <Row>
-            <h5>{company}</h5>
+            <h5>{stock.company}</h5>
             <Col md="6">
               <h3>Quantity</h3>
               <Input
@@ -58,9 +56,9 @@ function BuySellOptionScreen() {
           <Button
             className="w-100 mt-2"
             onClick={submitHandler}
-            color="primary"
+            color="warning"
           >
-            Tap To Buy
+            Tap To Sell
           </Button>
         </CardHeader>
       </Card>
@@ -68,4 +66,4 @@ function BuySellOptionScreen() {
   );
 }
 
-export default BuySellOptionScreen;
+export default SellOptionScreen;

@@ -29,7 +29,7 @@ function BuySellScreen() {
         <Row>
           <Col md="6">
             <Link
-              to={`/selloption/${company}`}
+              to={`/buyoption/${company}`}
               className="btn btn-primary"
               style={{ paddingLeft: 50, paddingRight: 50 }}
             >

@@ -22,20 +22,6 @@ function Portfolio() {
           <h3>Portfolio</h3>
         </CardHeader>
         <CardBody>
-          {/* <Row style={{ textAlign: "center" }}>
-            <Col md="6">
-              <h3>Invested</h3>
-            </Col>
-            <Col md="6">
-              <h3>Current</h3>
-            </Col>
-            <Col md="6">
-              <h3>43.454</h3>
-            </Col>
-            <Col md="6">
-              <h3>34.33</h3>
-            </Col>
-          </Row> */}
           {stocks.length < 1 ? (
             <h1>No Stocks Found</h1>
           ) : (
@@ -44,10 +30,10 @@ function Portfolio() {
                 <Col md="6">
                   <div>
                     <h3 style={{ textDecoration: "none" }}>{stock.company}</h3>
-                    <Link className=" btn btn-primary p-2" to="/buy_sell">
-                      BuyNow
-                    </Link>{" "}
-                    <Link className=" btn btn-warning p-2" to="/buy_sell">
+                    <Link
+                      className=" btn btn-warning p-2"
+                      to={`/selloption/${stock.id}`}
+                    >
                       SellNow
                     </Link>
                   </div>

@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import BuySellOptionScreen from "./views/BuySellOptionScreen/BuySellOptionScreen";
+import BuyOptionScreen from "./views/BuyOptionScreen/BuyOptionScreen";
 import BuySellScreen from "./views/BuySellScreen/BuySellScreen";
 import GraphScreen from "./views/GraphScreen/GraphScreen";
 import Home from "./views/Home/Home";
 import LoginScreen from "./views/LoginScreen/LoginScreen";
 import Portfolio from "./views/Portfolio/Portfolio";
+import SellOptionScreen from "./views/SellOptionScreen/SellOptionScreen";
 import StockScreen from "./views/StockView/StockView";
 function App() {
   const token = localStorage.getItem("token");
@@ -18,7 +19,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/stock" element={<StockScreen />} />
             <Route path="/buy_sell/:company" element={<BuySellScreen />} />
-            <Route path="/selloption/:company" element={<BuySellOptionScreen />} />
+            <Route path="/buyoption/:company" element={<BuyOptionScreen />} />
+            <Route path="/selloption/:id" element={<SellOptionScreen />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/graph" element={<GraphScreen />} />
           </>
