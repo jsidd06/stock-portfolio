@@ -26,12 +26,14 @@ function BuyOptionScreen() {
     };
     stocks.push(newStock);
     localStorage.setItem("stocks", JSON.stringify(stocks));
+    alert("Stock added successfully");
     window.location = "/portfolio";
   };
   const { company } = useParams();
   if (!company) {
     return <h1>Sorry this page is not available</h1>;
   }
+// input validation
   return (
     <Container className="mt-5">
       <Card>

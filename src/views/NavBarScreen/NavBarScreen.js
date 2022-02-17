@@ -2,16 +2,12 @@ import React from "react";
 import {
   Collapse,
   Container,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
   Nav,
   Navbar,
   NavbarBrand,
   NavbarToggler,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
 } from "reactstrap";
 
 function NavBarScreen() {

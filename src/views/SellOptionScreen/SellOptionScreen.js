@@ -22,6 +22,7 @@ function SellOptionScreen() {
     e.preventDefault();
     const filteredStocks = stocks.filter((s) => s.id !== id);
     localStorage.setItem("stocks", JSON.stringify(filteredStocks));
+    alert("Stock sold successfully");
     window.location = "/portfolio";
   };
 
@@ -41,6 +42,8 @@ function SellOptionScreen() {
                 type="number"
                 value={quantity}
                 onChange={(e) => setQuantity(e.target.value)}
+                invalid={quantity === ""}
+                min="1"
               />
             </Col>
             <Col md="6">
@@ -50,6 +53,8 @@ function SellOptionScreen() {
                 type="number"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
+                invalid={price === ""}
+                min="1"
               />
             </Col>
           </Row>

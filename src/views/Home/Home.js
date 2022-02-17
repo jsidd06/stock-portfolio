@@ -3,11 +3,8 @@ import { Link } from "react-router-dom";
 import {
   Card,
   CardBody,
-  CardHeader,
   CardImg,
-  CardImgOverlay,
   CardText,
-  CardTitle,
   Col,
   Container,
   Row,

@@ -6,10 +6,8 @@ import {
   CardHeader,
   Col,
   Container,
-  Input,
   Row,
 } from "reactstrap";
-import data from "../../FakeData/FakeData";
 function Portfolio() {
   const stocks = localStorage.getItem("stocks")
     ? JSON.parse(localStorage.getItem("stocks"))
