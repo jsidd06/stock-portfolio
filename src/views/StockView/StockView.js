@@ -25,7 +25,10 @@ function StockView(props) {
                 <div key={stock.id}>
                   <h3>{stock.company}</h3>
                   <br></br>
-                  <Link className=" btn btn-primary" to="/buy_sell">
+                  <Link
+                    className=" btn btn-primary"
+                    to={`/buy_sell/${stock.company}`}
+                  >
                     BuyNow
                   </Link>
                 </div>

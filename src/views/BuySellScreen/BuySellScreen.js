@@ -1,10 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {
   Button,
   Card,
   CardBody,
   CardHeader,
+  CardTitle,
   Col,
   Container,
   Row,
@@ -13,9 +14,18 @@ import {
 import Tabledata from "../../FakeData/TableFakeData";
 import data from "../../FakeData/FakeData";
 function BuySellScreen() {
+  const { company } = useParams();
+  if (!company) {
+    return <h1>Sorry this page is not available</h1>;
+  }
   return (
     <Container className="text-center mt-5">
       <Card>
+        <CardHeader>
+          <CardTitle>
+            <h2 className="h2">{company}</h2>
+          </CardTitle>
+        </CardHeader>
         <Row>
           <Col md="6">
             <Link
