@@ -18,7 +18,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/stock" element={<StockScreen />} />
             <Route path="/buy_sell/:company" element={<BuySellScreen />} />
-            <Route path="/selloption" element={<BuySellOptionScreen />} />
+            <Route path="/selloption/:company" element={<BuySellOptionScreen />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/graph" element={<GraphScreen />} />
           </>
