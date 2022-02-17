@@ -11,7 +11,6 @@ import StockScreen from "./views/StockView/StockView"
 function App() {
   return (
     <BrowserRouter>
-      <NavBarScreen />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginScreen />} />

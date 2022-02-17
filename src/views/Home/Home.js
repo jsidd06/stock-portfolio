@@ -14,6 +14,7 @@ import {
 } from "reactstrap";
 import stockImg from "../../Images/518-5187885_picture-of-a-phone-and-laptop-with-the.png";
 import FooterScreen from "../FooterScreen/FooterScreen";
+import NavBarScreen from "../NavBarScreen/NavBarScreen";
 function Home() {
   if (!localStorage.getItem("token")) {
     window.location = "/login";
@@ -22,8 +23,8 @@ function Home() {
   return (
     <>
       <div className="mt-2">
+        <NavBarScreen />
         <Card inverse style={{ textAlign: "left" }}>
-         
           <CardBody>
             <Row>
               <Col sm="12" md="6">
