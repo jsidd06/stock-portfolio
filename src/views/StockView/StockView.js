@@ -14,8 +14,8 @@ function StockView() {
         </CardHeader>
         <CardBody>
           <Input placeholder="search now" />
-          {data.map((stock) => (
-            <Row className="mt-5 shadow-sm p-3  rounded">
+          {data.map((stock,index) => (
+            <Row key={index} className="mt-5 shadow-sm p-3  rounded">
               <Col md="6">
                 <div key={stock.id}>
                   <h3>

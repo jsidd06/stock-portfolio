@@ -62,8 +62,8 @@ function BuySellScreen() {
               ))}
             </tbody>
           </Table>
-          {data.map((stock) => (
-            <Row className="mt-2 shadow-sm p-1  rounded">
+          {data.map((stock,index) => (
+            <Row key={index}className="mt-2 shadow-sm p-1  rounded">
               <Col md="6">
                 <div key={stock.id} style={{ textAlign: "left" }}>
                   <Link style={{ textDecoration: "none" }} to="/buy_sell">

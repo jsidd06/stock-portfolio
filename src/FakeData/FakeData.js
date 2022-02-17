@@ -11,7 +11,8 @@ const data =[
         "peRatio": "100",
         "week52High": "100",
         "week52Low": "100",
-        "ytdChange": "100"
+        "ytdChange": "100",
+        "link": "apple",
     },
     {
         "id": 2,
