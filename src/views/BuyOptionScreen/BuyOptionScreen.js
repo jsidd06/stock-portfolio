@@ -70,11 +70,13 @@ function BuyOptionScreen() {
                 />
               </Col>
             </Row>
-            {price > 0 && quantity > 0 && (
-              <Button className="w-100 mt-2" color="primary">
-                Tap To Buy
-              </Button>
-            )}
+            <Button
+              className="w-100 mt-2"
+              color="primary"
+              disabled={!price > 0 || !quantity > 0}
+            >
+              Tap To Buy
+            </Button>
           </Form>
         </CardBody>
       </Card>
