@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import {
   Button,
   Card,
+  CardBody,
   CardHeader,
   Col,
   Container,
+  Form,
   Input,
   Row,
 } from "reactstrap";
 import { useParams } from "react-router-dom";
 import { nanoid } from "nanoid";
 function BuyOptionScreen() {
-  const [quantity, setQuantity] = useState();
-  const [price, setPrice] = useState();
+  const [quantity, setQuantity] = useState(0);
+  const [price, setPrice] = useState(0);
   const submitHandler = (e) => {
     e.preventDefault();
     const stocks = localStorage.getItem("stocks")
@@ -33,40 +35,48 @@ function BuyOptionScreen() {
   if (!company) {
     return <h1>Sorry this page is not available</h1>;
   }
-// input validation
+  // input validation
   return (
     <Container className="mt-5">
       <Card>
         <CardHeader>
-          <Row>
-            <h5>{company}</h5>
-            <Col md="6">
-              <h3>Quantity</h3>
-              <Input
-                placeholder="Quantity"
-                type="number"
-                value={quantity}
-                onChange={(e) => setQuantity(e.target.value)}
-              />
-            </Col>
-            <Col md="6">
-              <h3>Price</h3>
-              <Input
-                placeholder="Price"
-                type="number"
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
-              />
-            </Col>
-          </Row>
-          <Button
-            className="w-100 mt-2"
-            onClick={submitHandler}
-            color="primary"
-          >
-            Tap To Buy
-          </Button>
+          <h5>{company}</h5>
         </CardHeader>
+        <CardBody>
+          <Form onSubmit={submitHandler}>
+            <Row>
+              <Col md="6">
+                <h3>Quantity</h3>
+                <Input
+                  placeholder="Quantity"
+                  type="number"
+                  value={quantity}
+                  onChange={(e) => setQuantity(e.target.value)}
+                  minLength="2"
+                  valid={quantity > 0}
+                  invalid={quantity <= 0}
+                />
+              </Col>
+              <Col md="6">
+                <h3>Price</h3>
+                <Input
+                  placeholder="Price"
+                  type="number"
+                  value={price}
+                  onChange={(e) => setPrice(e.target.value)}
+                  valid={price > 0}
+                  invalid={price <= 0}
+                  minLength="2"
+                />
+              </Col>
+            </Row>
+            {price > 0 && quantity > 0 && (
+              <Button className="w-100 mt-2" color="primary">
+                Tap To Buy
+              </Button>
+            )}
+          </Form>
+        </CardBody>
       </Card>
     </Container>
   );
