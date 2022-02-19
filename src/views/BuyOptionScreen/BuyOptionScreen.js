@@ -12,6 +12,7 @@ import {
 } from "reactstrap";
 import { useParams } from "react-router-dom";
 import { nanoid } from "nanoid";
+import NavBarScreen from "../NavBarScreen/NavBarScreen";
 function BuyOptionScreen() {
   const [quantity, setQuantity] = useState(0);
   const [price, setPrice] = useState(0);
@@ -38,6 +39,7 @@ function BuyOptionScreen() {
   // input validation
   return (
     <Container className="mt-5">
+      <NavBarScreen />
       <Card>
         <CardHeader>
           <h5>{company}</h5>

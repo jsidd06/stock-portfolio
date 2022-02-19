@@ -12,6 +12,7 @@ import {
 } from "reactstrap";
 import Tabledata from "../../FakeData/TableFakeData";
 import data from "../../FakeData/FakeData";
+import NavBarScreen from "../NavBarScreen/NavBarScreen";
 function BuySellScreen() {
   const { company } = useParams();
   if (!company) {
@@ -19,6 +20,7 @@ function BuySellScreen() {
   }
   return (
     <Container className="text-center mt-5">
+      <NavBarScreen />
       <Card>
         <CardHeader>
           <CardTitle>

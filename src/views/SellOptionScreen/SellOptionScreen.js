@@ -11,6 +11,7 @@ import {
   Row,
 } from "reactstrap";
 import { useParams } from "react-router-dom";
+import NavBarScreen from "../NavBarScreen/NavBarScreen";
 function SellOptionScreen() {
   const { id } = useParams();
   const stocks = localStorage.getItem("stocks")
@@ -33,6 +34,7 @@ function SellOptionScreen() {
   }
   return (
     <Container className="mt-5">
+      <NavBarScreen />
       <Card>
         <CardHeader>
           {" "}

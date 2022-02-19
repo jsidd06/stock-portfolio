@@ -8,6 +8,7 @@ import {
   Container,
   Row,
 } from "reactstrap";
+import NavBarScreen from "../NavBarScreen/NavBarScreen";
 function Portfolio() {
   const stocks = localStorage.getItem("stocks")
     ? JSON.parse(localStorage.getItem("stocks"))
@@ -15,6 +16,7 @@ function Portfolio() {
 
   return (
     <Container className="mt-2">
+      <NavBarScreen />
       <Card>
         <CardHeader>
           <h3>Portfolio</h3>

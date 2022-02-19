@@ -1,6 +1,6 @@
 import React from "react";
 import Charts from "react-apexcharts";
-
+import NavBarScreen from "../NavBarScreen/NavBarScreen";
 function GraphScreen() {
   const labels = [];
   const series = [
@@ -82,6 +82,7 @@ function GraphScreen() {
   };
   return (
     <div className="container">
+      <NavBarScreen />
       <Charts
         options={options}
         series={[

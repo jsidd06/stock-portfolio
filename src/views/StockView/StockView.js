@@ -10,9 +10,11 @@ import {
   Row,
 } from "reactstrap";
 import data from "../../FakeData/FakeData";
+import NavBarScreen from "../NavBarScreen/NavBarScreen";
 function StockView(props) {
   return (
     <Container className="mt-2">
+      <NavBarScreen />
       <Card>
         <CardHeader>
           <h3>Stock View</h3>
