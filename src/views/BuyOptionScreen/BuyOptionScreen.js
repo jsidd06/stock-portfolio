@@ -15,7 +15,7 @@ import { nanoid } from "nanoid";
 import NavBarScreen from "../NavBarScreen/NavBarScreen";
 function BuyOptionScreen() {
   const [quantity, setQuantity] = useState(0);
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState(100);
   const submitHandler = (e) => {
     e.preventDefault();
     const stocks = localStorage.getItem("stocks")
@@ -43,6 +43,7 @@ function BuyOptionScreen() {
       <Card className="mt-2">
         <CardHeader>
           <h5>{company}</h5>
+          <h6>{price}</h6>
         </CardHeader>
         <CardBody>
           <Form onSubmit={submitHandler}>

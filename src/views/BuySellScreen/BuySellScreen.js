@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
   Card,
@@ -11,7 +11,7 @@ import {
   Table,
 } from "reactstrap";
 import Tabledata from "../../FakeData/TableFakeData";
-import data from "../../FakeData/FakeData";
+import data from "../../FakeData/FakeData"
 import NavBarScreen from "../NavBarScreen/NavBarScreen";
 function BuySellScreen() {
   const { company } = useParams();
@@ -24,7 +24,7 @@ function BuySellScreen() {
       <Card className="mt-2">
         <CardHeader>
           <CardTitle>
-            <h2 className="h2">{company}</h2>
+            <h2 className="h3">{company}</h2>
           </CardTitle>
         </CardHeader>
         <Row>
