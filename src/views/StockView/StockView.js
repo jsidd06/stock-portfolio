@@ -15,7 +15,7 @@ function StockView() {
   return (
     <Container className="mt-2">
       <NavBarScreen />
-      <Card>
+      <Card className="mt-2">
         <CardHeader>
           <h3>Stock View</h3>
         </CardHeader>
@@ -37,7 +37,7 @@ function StockView() {
                     className=" btn btn-warning m-2"
                     to="/graph"
                   >
-                    BuyNow
+                    View Graph
                   </Link>
                 </div>
               </Col>

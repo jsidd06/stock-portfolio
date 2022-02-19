@@ -40,7 +40,7 @@ function BuyOptionScreen() {
   return (
     <Container className="mt-5">
       <NavBarScreen />
-      <Card>
+      <Card className="mt-2">
         <CardHeader>
           <h5>{company}</h5>
         </CardHeader>

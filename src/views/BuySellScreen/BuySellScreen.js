@@ -21,29 +21,20 @@ function BuySellScreen() {
   return (
     <Container className="text-center mt-5">
       <NavBarScreen />
-      <Card>
+      <Card className="mt-2">
         <CardHeader>
           <CardTitle>
             <h2 className="h2">{company}</h2>
           </CardTitle>
         </CardHeader>
         <Row>
-          <Col md="6">
+          <Col className="mt-3">
             <Link
               to={`/buy-option/${company}`}
               className="btn btn-primary"
               style={{ paddingLeft: 50, paddingRight: 50 }}
             >
               Buy
-            </Link>
-          </Col>
-          <Col md="6">
-            <Link
-              to="/graph"
-              className="btn btn-warning"
-              style={{ paddingLeft: 50, paddingRight: 50 }}
-            >
-              View Graph
             </Link>
           </Col>
         </Row>

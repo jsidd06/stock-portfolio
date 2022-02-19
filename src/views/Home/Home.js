@@ -17,7 +17,7 @@ function Home() {
     <>
       <div className="mt-2">
         <NavBarScreen />
-        <Card inverse style={{ textAlign: "left" }}>
+        <Card inverse style={{ textAlign: "left" }} className="mt-2">
           <CardBody>
             <Row>
               <Col sm="12" md="6">

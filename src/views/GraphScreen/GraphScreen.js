@@ -84,6 +84,7 @@ function GraphScreen() {
     <div className="container">
       <NavBarScreen />
       <Charts
+        className="mt-2"
         options={options}
         series={[
           {

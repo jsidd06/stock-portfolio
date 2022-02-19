@@ -17,7 +17,7 @@ function Portfolio() {
   return (
     <Container className="mt-2">
       <NavBarScreen />
-      <Card>
+      <Card className="mt-2">
         <CardHeader>
           <h3>Portfolio</h3>
         </CardHeader>

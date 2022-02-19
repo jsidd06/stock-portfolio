@@ -35,7 +35,7 @@ function SellOptionScreen() {
   return (
     <Container className="mt-5">
       <NavBarScreen />
-      <Card>
+      <Card className="mt-2">
         <CardHeader>
           {" "}
           <h5>{stock.company}</h5>
@@ -62,14 +62,11 @@ function SellOptionScreen() {
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
                   valid={price > 0}
-                  invalid={price <=0}
+                  invalid={price <= 0}
                 />
               </Col>
             </Row>
-            <Button
-              className="w-100 mt-2"
-              color="warning"
-            >
+            <Button className="w-100 mt-2" color="warning">
               Tap To Sell
             </Button>
           </Form>
