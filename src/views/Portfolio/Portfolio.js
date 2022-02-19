@@ -32,7 +32,7 @@ function Portfolio() {
                     <h3 style={{ textDecoration: "none" }}>{stock.company}</h3>
                     <Link
                       className=" btn btn-warning p-2"
-                      to={`/selloption/${stock.id}`}
+                      to={`/sell-option/${stock.id}`}
                     >
                       SellNow
                     </Link>

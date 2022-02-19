@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import {
   Card,
   CardBody,
@@ -11,7 +11,7 @@ import {
 } from "reactstrap";
 import data from "../../FakeData/FakeData";
 import NavBarScreen from "../NavBarScreen/NavBarScreen";
-function StockView(props) {
+function StockView() {
   return (
     <Container className="mt-2">
       <NavBarScreen />
@@ -29,7 +29,13 @@ function StockView(props) {
                   <br></br>
                   <Link
                     className=" btn btn-primary"
-                    to={`/buy_sell/${stock.company}`}
+                    to={`/buy-sell/${stock.company}`}
+                  >
+                    BuyNow
+                  </Link>
+                  <Link
+                    className=" btn btn-warning m-2"
+                    to="/graph"
                   >
                     BuyNow
                   </Link>

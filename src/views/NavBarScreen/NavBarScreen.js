@@ -28,7 +28,7 @@ function NavBarScreen() {
               <NavLink href="/portfolio">Portfolio</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/Stock">Stock View</NavLink>
+              <NavLink href="/stock-view">Stock View</NavLink>
             </NavItem>
           </Nav>
           {token ? (

@@ -30,7 +30,7 @@ function BuySellScreen() {
         <Row>
           <Col md="6">
             <Link
-              to={`/buyoption/${company}`}
+              to={`/buy-option/${company}`}
               className="btn btn-primary"
               style={{ paddingLeft: 50, paddingRight: 50 }}
             >
@@ -72,20 +72,6 @@ function BuySellScreen() {
               ))}
             </tbody>
           </Table>
-          {data.map((stock, index) => (
-            <Row key={index} className="mt-2 shadow-sm p-1  rounded">
-              <Col md="6">
-                <div key={stock.id} style={{ textAlign: "left" }}>
-                  <Link style={{ textDecoration: "none" }} to="/buy_sell">
-                    {stock.company}
-                  </Link>
-                </div>
-              </Col>
-              <Col md="6" style={{ textAlign: "right" }}>
-                <p>Change: {stock.change}</p>
-              </Col>
-            </Row>
-          ))}
         </CardBody>
       </Card>
     </Container>
