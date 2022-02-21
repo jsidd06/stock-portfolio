@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Charts from "react-apexcharts";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  Button,
+  Form,
+  FormGroup,
+  Input,
+  Label,
+  Row,
+  Col,
+} from "reactstrap";
+import { getRandomGraph } from "../../utils/helpers";
 import NavBarScreen from "../NavBarScreen/NavBarScreen";
 function GraphScreen() {
   const labels = [];
-  const series = [
-    10, 20, 10, 40, 20, 30, 30, 20, 30, 20, 0, 0, 10, 20, 30, 10, 20, 30, 40,
-    10, 10, 10,
-  ];
+  const [series, setSeries] = useState(getRandomGraph(0, 100, 20));
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setSeries([...series, ...getRandomGraph(60, 100, 10)]);
+    }, 3000);
+    return () => clearInterval(intervalId);
+  }, []);
+
   const leadColors = {
     series1: "#00d4bd",
     series2: "#826bf8",
@@ -83,16 +101,48 @@ function GraphScreen() {
   return (
     <div className="container">
       <NavBarScreen />
-      <Charts
-        className="mt-2"
-        options={options}
-        series={[
-          {
-            name: "Pipelines",
-            data: [...series],
-          },
-        ]}
-      />
+      <Card className="mt-2">
+        <CardHeader>
+          <Row>
+            <Col sm={12} md="6">
+              <h3>Graph</h3>
+            </Col>
+            <Col sm={12} md="6">
+              <Form>
+                <Row>
+                  <Col sm={5}>
+                    <FormGroup>
+                      <Label>From</Label>
+                      <Input type="date" />
+                    </FormGroup>
+                  </Col>
+                  <Col sm={5}>
+                    <FormGroup>
+                      <Label>To</Label>
+                      <Input type="date" />
+                    </FormGroup>
+                  </Col>
+                  <Col sm={2}>
+                    <Button className="mt-4">Submit</Button>
+                  </Col>
+                </Row>
+              </Form>
+            </Col>
+          </Row>
+        </CardHeader>
+        <CardBody>
+          <Charts
+            className="mt-2"
+            options={options}
+            series={[
+              {
+                name: "Pipelines",
+                data: [...series],
+              },
+            ]}
+          />
+        </CardBody>
+      </Card>
     </div>
   );
 }

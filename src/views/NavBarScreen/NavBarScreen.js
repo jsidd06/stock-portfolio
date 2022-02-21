@@ -9,6 +9,7 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
+import { Link } from "react-router-dom";
 
 function NavBarScreen() {
   const token = localStorage.getItem("token");
@@ -25,16 +26,24 @@ function NavBarScreen() {
         <Collapse navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/portfolio">Portfolio</NavLink>
+              <Link className="nav-link" to="/portfolio">
+                Portfolio
+              </Link>
             </NavItem>
             <NavItem>
-              <NavLink href="/stock-view">Stock View</NavLink>
+              <Link className="nav-link" to="/stock-view">
+                Stock View
+              </Link>
             </NavItem>
           </Nav>
           {token ? (
-            <NavLink onClick={logoutHandler}>Logout</NavLink>
+            <Link to="#" className="nav-link" onClick={logoutHandler}>
+              Logout
+            </Link>
           ) : (
-            <NavLink href="/login">Login</NavLink>
+            <Link className="nav-link" to="/login">
+              Login
+            </Link>
           )}
         </Collapse>
       </Navbar>

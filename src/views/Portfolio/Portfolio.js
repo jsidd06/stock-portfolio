@@ -1,13 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Col,
-  Container,
-  Row,
-} from "reactstrap";
+import { Card, CardBody, CardHeader, Col, Container, Row } from "reactstrap";
 import NavBarScreen from "../NavBarScreen/NavBarScreen";
 function Portfolio() {
   const stocks = localStorage.getItem("stocks")
@@ -41,6 +34,7 @@ function Portfolio() {
                 <Col md="6" style={{ textAlign: "right" }}>
                   <p>Price: {stock.price}</p>
                   <p>Quantity: {stock.quantity}</p>
+                  <p>Total: {stock.total}</p>
                 </Col>
               </Row>
             ))

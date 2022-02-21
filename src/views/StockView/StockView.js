@@ -42,8 +42,7 @@ function StockView() {
                 </div>
               </Col>
               <Col md="6" style={{ textAlign: "right" }}>
-                <p>Price: {stock.price}</p>
-                <p>Change: {stock.change}</p>
+                <p>Quantity: {stock.quantity}</p>
               </Col>
             </Row>
           ))}

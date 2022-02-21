@@ -13,9 +13,10 @@ import {
 import { useParams } from "react-router-dom";
 import { nanoid } from "nanoid";
 import NavBarScreen from "../NavBarScreen/NavBarScreen";
+import data from "../../FakeData/FakeData";
 function BuyOptionScreen() {
   const [quantity, setQuantity] = useState(0);
-  const [price, setPrice] = useState(100);
+  const [price, setPrice] = useState(0);
   const submitHandler = (e) => {
     e.preventDefault();
     const stocks = localStorage.getItem("stocks")
@@ -25,6 +26,7 @@ function BuyOptionScreen() {
       company,
       quantity,
       price,
+      total: quantity * price,
       id: nanoid(),
     };
     stocks.push(newStock);
@@ -43,7 +45,6 @@ function BuyOptionScreen() {
       <Card className="mt-2">
         <CardHeader>
           <h5>{company}</h5>
-          <h6>{price}</h6>
         </CardHeader>
         <CardBody>
           <Form onSubmit={submitHandler}>
@@ -78,7 +79,7 @@ function BuyOptionScreen() {
               color="primary"
               disabled={!price > 0 || !quantity > 0}
             >
-              Tap To Buy
+              Tap To Buy {quantity * price}
             </Button>
           </Form>
         </CardBody>
